@@ -6,10 +6,10 @@ const Header = () => {
     const theme = useTheme()
     const customStyles = useStyles(theme)
 
-    return <AppBar style={{backgroundColor: "#68B984"}}>
+    return <AppBar sx={customStyles.appBar}>
         <Toolbar>
             <IconButton>
-                <MenuOutlined fontSize={'large'} sx={{color: 'white', display: {md: 'none'}}} />
+                <MenuOutlined sx={customStyles.menuButton} fontSize={'large'} />
             </IconButton>
             <Typography sx={customStyles.logo}>
                 {"JAVIST"}
