@@ -12,7 +12,7 @@ const useStyles = (theme) => ({
         }
     },
     root: {
-        backgroundColor: "#68B984",
+        backgroundColor: theme.palette.primary,
         borderRadius: 0,
     }
 })
