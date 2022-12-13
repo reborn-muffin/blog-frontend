@@ -2,6 +2,7 @@ const useStyles = (theme) => ({
     logo: {
         typography: 'h5',
         fontWeight: 'bold',
+        color: 'white'
     },
     menuButton: {
         display: 'none',
@@ -10,8 +11,9 @@ const useStyles = (theme) => ({
             display: "block",
         }
     },
-    appBar: {
+    root: {
         backgroundColor: "#68B984",
+        borderRadius: 0,
     }
 })
 

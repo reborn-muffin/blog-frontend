@@ -1,4 +1,4 @@
-import {AppBar, IconButton, Toolbar, Typography, useTheme} from "@mui/material";
+import {Card, IconButton, Toolbar, Typography, useTheme} from "@mui/material";
 import {MenuOutlined} from "@mui/icons-material";
 import useStyles from "./useStyles"
 
@@ -6,7 +6,7 @@ const Header = () => {
     const theme = useTheme()
     const customStyles = useStyles(theme)
 
-    return <AppBar variant={'outlined'} sx={customStyles.appBar}>
+    return <Card variant={'outlined'} sx={customStyles.root} elevation={0}>
         <Toolbar variant={'dense'}>
             <IconButton>
                 <MenuOutlined sx={customStyles.menuButton} fontSize={'large'} />
@@ -15,7 +15,7 @@ const Header = () => {
                 {"JAVIST"}
             </Typography>
         </Toolbar>
-    </AppBar>
+    </Card>
 }
 
 export default Header
