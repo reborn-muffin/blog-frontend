@@ -6,8 +6,8 @@ const Header = () => {
     const theme = useTheme()
     const customStyles = useStyles(theme)
 
-    return <AppBar sx={customStyles.appBar}>
-        <Toolbar>
+    return <AppBar variant={'outlined'} sx={customStyles.appBar}>
+        <Toolbar variant={'dense'}>
             <IconButton>
                 <MenuOutlined sx={customStyles.menuButton} fontSize={'large'} />
             </IconButton>
