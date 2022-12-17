@@ -2,7 +2,7 @@ const useStyles = (theme) => ({
     logo: {
         typography: 'h5',
         fontWeight: 'bold',
-        color: 'white'
+        color: theme.palette.primary.contrastText
     },
     menuButton: {
         display: 'none',
@@ -12,7 +12,7 @@ const useStyles = (theme) => ({
         }
     },
     root: {
-        backgroundColor: theme.palette.primary,
+        backgroundColor: theme.palette.primary.main,
         borderRadius: 0,
     }
 })
