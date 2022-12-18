@@ -5,9 +5,9 @@ const SearchComponent = () => {
     const theme = useTheme()
     const customStyles = useStyles(theme)
 
-    return <Stack direction={'row'} alignItems={'center'} spacing={1}>
-        <TextField variant={'outlined'} inputProps={{ style: customStyles.searchField }} />
-        <Button variant={'contained'} style={customStyles.searchButton}>Шукати</Button>
+    return <Stack sx={customStyles.searchContainer}>
+        <TextField variant={'outlined'} fullWidth inputProps={{ style: customStyles.searchField }} />
+        <Button variant={'contained'} sx={customStyles.searchButton}>Шукати</Button>
     </Stack>
 }
 

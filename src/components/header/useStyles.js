@@ -4,13 +4,6 @@ const useStyles = (theme) => ({
         fontWeight: 'bold',
         color: theme.palette.primary.contrastText
     },
-    menuButton: {
-        display: 'none',
-        color: 'white',
-        [theme.breakpoints.down('sm')]: {
-            display: "block",
-        }
-    },
     root: {
         backgroundColor: theme.palette.primary.main,
         borderRadius: 0,

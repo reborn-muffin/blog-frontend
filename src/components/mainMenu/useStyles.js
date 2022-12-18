@@ -10,12 +10,17 @@ const useStyles = (theme) => ({
     mainMenuItem: {
         color: theme.palette.text.primary,
         textTransform: 'none',
+        [theme.breakpoints.down('sm')]: {
+            width: '100%',
+            display: 'flex',
+            justifyContent: 'space-between',
+            fontSize: '1rem',
+        }
     },
     itemList: {
         display: 'flex',
-        width: '60%',
-        justifyContent: 'space-between',
-        marginLeft: '3rem',
+        width: '500px',
+        justifyContent: 'space-around',
     },
     menuSearchSection: {
         marginRight: '1rem',
@@ -24,10 +29,35 @@ const useStyles = (theme) => ({
     },
     searchButton: {
         textTransform: 'none',
-        padding: '0.2rem 0.4rem',
+        padding: '0.15rem 1rem',
+        marginLeft: '0.5rem',
+        [theme.breakpoints.down('sm')]: {
+            width: '100%',
+            marginLeft: 0,
+            marginTop: '0.2rem',
+        },
     },
     searchField: {
         padding: '0.2rem 0.3rem',
+    },
+    menuButton: {
+        display: 'none',
+        color: 'white',
+        [theme.breakpoints.down('sm')]: {
+            display: "block",
+        }
+    },
+    searchContainer: {
+        direction: 'row',
+        alignItems: 'center',
+        flexDirection: 'row',
+        [theme.breakpoints.down('sm')]: {
+            flexDirection: 'column',
+            margin: '2rem 1rem',
+        },
+    },
+    sideMenuContainer: {
+        width: '290px',
     },
 })
 
