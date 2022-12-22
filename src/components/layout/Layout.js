@@ -2,6 +2,7 @@ import MainMenu from "../mainMenu/MainMenu";
 import Header from "../header/Header";
 import {AppBar, createTheme, ThemeProvider, useTheme} from "@mui/material";
 import customTheme from "./customTheme";
+import PageContent from "../pageContent/PageContent";
 
 const Layout = () => {
     const defaultTheme = useTheme()
@@ -12,6 +13,7 @@ const Layout = () => {
             <Header/>
             <MainMenu/>
         </AppBar>
+        <PageContent />
     </ThemeProvider>
 }
 
