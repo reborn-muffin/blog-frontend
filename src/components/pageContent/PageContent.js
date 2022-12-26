@@ -12,7 +12,7 @@ const PageContent = () => {
     const dispatch = useDispatch()
     const article = useSelector(state => state.articles)
 
-    const fetchOptimized = useCallback(() => dispatch(fetchAll), [dispatch])
+    const fetchOptimized = useCallback(() => dispatch(fetchAll()), [dispatch])
 
     useEffect(() => {
         fetchOptimized()
