@@ -1,6 +1,6 @@
 import {Card, Grid, IconButton, Typography, useTheme} from "@mui/material";
 import {FavoriteBorderOutlined, ModeCommentOutlined} from "@mui/icons-material";
-import {useCallback, useEffect} from "react";
+import {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchAll} from "./articlesSlice";
 import useStyles from "./useStyles";
@@ -12,11 +12,9 @@ const PageContent = () => {
     const dispatch = useDispatch()
     const article = useSelector(state => state.articles)
 
-    const fetchOptimized = useCallback(() => dispatch(fetchAll()), [dispatch])
-
     useEffect(() => {
-        fetchOptimized()
-    }, [fetchOptimized])
+        dispatch(fetchAll())
+    }, [dispatch])
 
     return article ? <Card sx={customStyle.articleCard}>
         <Grid container sx={customStyle.mainGridContainer}>
