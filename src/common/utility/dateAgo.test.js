@@ -34,4 +34,19 @@ describe('verify if getDateAgoString works properly', () => {
         createdDate.setDate(createdDate.getDate() - 1)
         expect(getDateAgoString(createdDate)).toEqual(createdDate.toLocaleDateString())
     })
+    it('should occur an error because the creation date has not yet arrived', () => {
+        const createdDate = new Date(Date.now())
+        createdDate.setDate(createdDate.getDate() + 1)
+
+        let errorMessage
+
+        try{
+            getDateAgoString(createdDate);
+        }
+        catch (error){
+            errorMessage = error.message
+        }
+
+        expect(errorMessage).toEqual('Created date is invalid')
+    })
 })
