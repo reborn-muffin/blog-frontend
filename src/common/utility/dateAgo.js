@@ -18,7 +18,9 @@ export const getDateAgoString = (dateInString) => {
 
     let resultDate
 
-    if(dateDiffInMinutes < 60)
+    if(dateDiffInMinutes < 0 || dateDiffInHours < 0)
+        throw new Error("Created date is invalid")
+    else if(dateDiffInMinutes < 60)
         resultDate = `${dateDiffInMinutes} ${getPluralWord('minutes', dateDiffInMinutes)} тому`
     else if(dateDiffInHours < 24)
         resultDate = `${dateDiffInHours} ${getPluralWord('hours', dateDiffInHours)} тому`
