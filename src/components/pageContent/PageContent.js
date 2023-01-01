@@ -4,6 +4,7 @@ import {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchAll} from "./articlesSlice";
 import useStyles from "./useStyles";
+import {getDateAgoString} from "../../common/utility/dateAgo";
 
 const PageContent = () => {
     const theme = useTheme()
@@ -19,7 +20,7 @@ const PageContent = () => {
     return article ? <Card sx={customStyle.articleCard}>
         <Grid container sx={customStyle.mainGridContainer}>
             <Grid container sx={customStyle.headOfArticle}>
-                <Typography variant={'overline'}>{article[0].createdDate}</Typography>
+                <Typography variant={'overline'}>Опубліковано {getDateAgoString(article[0].createdDate)}</Typography>
                 <Typography variant={'overline'}>{article[0].author}</Typography>
             </Grid>
 
