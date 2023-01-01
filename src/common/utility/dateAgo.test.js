@@ -1,15 +1,26 @@
 import {getDateAgoString, getPluralWord} from "./dateAgo";
 
 describe('verify if getPluralWord works properly', () => {
-    const testInputs = [
+    const hoursInputs = [
         {count: 0, word: 'годин'},
         {count: 1, word: 'годину'},
         {count: 2, word: 'години'},
         {count: 7, word: 'годин'},
         {count: 21, word: 'годину'}]
 
-    test.each(testInputs)('should return %s when hours equal %i', ({word, count}) => {
+    const minutesInputs = [
+        {count: 0, word: 'хвилин'},
+        {count: 1, word: 'хвилину'},
+        {count: 2, word: 'хвилини'},
+        {count: 7, word: 'хвилин'},
+        {count: 21, word: 'хвилину'}]
+
+    test.each(hoursInputs)('should return %s when hours equal %i', ({word, count}) => {
             expect(getPluralWord('hours', count)).toEqual(word)
+    })
+
+    test.each(minutesInputs)('should return %s when minutes equal %i', ({word, count}) => {
+        expect(getPluralWord('minutes', count)).toEqual(word)
     })
 })
 
