@@ -15,12 +15,23 @@ describe('verify if getPluralWord works properly', () => {
         {count: 7, word: 'хвилин'},
         {count: 21, word: 'хвилину'}]
 
+    const secondsInputs = [
+        {count: 0, word: 'секунд'},
+        {count: 1, word: 'секунду'},
+        {count: 2, word: 'секунди'},
+        {count: 7, word: 'секунд'},
+        {count: 21, word: 'секунду'}]
+
     test.each(hoursInputs)('should return %s when hours equal %i', ({word, count}) => {
             expect(getPluralWord('hours', count)).toEqual(word)
     })
 
     test.each(minutesInputs)('should return %s when minutes equal %i', ({word, count}) => {
         expect(getPluralWord('minutes', count)).toEqual(word)
+    })
+
+    test.each(secondsInputs)('should return %s when seconds equal %i', ({word, count}) => {
+        expect(getPluralWord('seconds', count)).toEqual(word)
     })
 })
 
