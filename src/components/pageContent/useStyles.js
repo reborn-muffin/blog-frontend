@@ -33,8 +33,7 @@ const useStyles = (theme) => ({
     likesAndComments: {
         width: '80%',
         justifyContent: 'flex-end',
-        marginBottom: '3rem',
-        color: theme.palette.primary.main
+        marginBottom: '1rem'
     }
 })
 
