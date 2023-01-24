@@ -22,6 +22,7 @@ describe('verify if getPluralWord works properly', () => {
         {count: 7, word: 'секунд'},
         {count: 21, word: 'секунду'}]
 
+    // TODO fix tests
     test.each(hoursInputs)('should return %s when hours equal %i', ({word, count}) => {
             expect(getPluralWord('hours', count)).toEqual(word)
     })
