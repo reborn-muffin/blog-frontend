@@ -17,8 +17,6 @@ const PageContent = () => {
         dispatch(fetchAll())
     }, [dispatch])
 
-    console.log(article)
-
     return article?.length > 0 ? <Card sx={customStyle.articleCard}>
         <Grid container sx={customStyle.mainGridContainer}>
             <Grid container sx={customStyle.headOfArticle}>

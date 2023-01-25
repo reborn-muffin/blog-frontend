@@ -15,9 +15,6 @@ const Comments = ({ articleId }) => {
         dispatch(fetchAll())
     }, [])
 
-    console.log(comments)
-
-
     return comments?.length > 0 ? <Box width={'100%'} wdisplay={'flex'} justifyContent={'flex-start'}>
         <Divider variant={'fullWidth'} sx={{marginY: '2rem'}}/>
         <Typography variant={'subtitle1'}>Коментарі</Typography>
