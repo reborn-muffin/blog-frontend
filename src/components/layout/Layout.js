@@ -12,7 +12,7 @@ const Layout = () => {
 
     return <ThemeProvider theme={theme}>
         <Provider store={store}>
-            <AppBar variant={'outlined'} elevation={0} sx={{border: 'none'}}>
+            <AppBar variant={'outlined'} elevation={0} sx={{border: 'none', background: 'transparent'}}>
                 <Header/>
                 <MainMenu/>
             </AppBar>
