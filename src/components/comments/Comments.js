@@ -13,7 +13,7 @@ const Comments = ({ articleId }) => {
 
     useEffect(() => {
         dispatch(fetchAll())
-    }, [])
+    }, [dispatch])
 
     return comments?.length > 0 ? <Box width={'100%'} wdisplay={'flex'} justifyContent={'flex-start'}>
         <Divider variant={'fullWidth'} sx={{marginY: '2rem'}}/>
