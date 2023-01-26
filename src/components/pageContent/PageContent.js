@@ -1,10 +1,11 @@
-import {Card, Grid, Typography, useTheme} from "@mui/material";
+import {Box, Card, Grid, Typography, useTheme} from "@mui/material";
 import {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchAll} from "./articlesSlice";
 import useStyles from "./useStyles";
 import {getDateAgoString} from "../../common/utility/dateAgo";
 import Comments from "../comments/Comments";
+import {CircleRounded} from "@mui/icons-material";
 
 const PageContent = () => {
     const theme = useTheme()
@@ -21,7 +22,10 @@ const PageContent = () => {
         <Grid container sx={customStyle.mainGridContainer}>
             <Grid container sx={customStyle.headOfArticle}>
                 <Typography variant={'overline'}>Опубліковано {getDateAgoString(article[0].createdDate)}</Typography>
-                <Typography variant={'overline'}>{article[0].author}</Typography>
+                <Box display={'flex'}>
+                    <CircleRounded fontSize={'large'} sx={{marginRight: '0.2em'}}/>
+                    <Typography variant={'overline'}>{article[0].author}</Typography>
+                </Box>
             </Grid>
 
             <Grid item xs={11} md={10}>
